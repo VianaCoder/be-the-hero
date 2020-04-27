@@ -10,7 +10,6 @@ const routes = express.Router();
 //login
 routes.post('/session', SessionController.create);
 
-
 //rotas ongs
 routes.get('/ongs', OngController.index);
 routes.post('/ongs', OngController.create);
