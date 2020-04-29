@@ -1,10 +1,14 @@
-import React from 'react';
-import Header from './Header'
+import React, { useState } from 'react';
+import Logon from './pages/logons'
+import './global.css';
 
-function App() {
+function App(){
+
   return (
-    <Header title="Semana Omnistack"/>
+    <div>
+      <Logon></Logon>
+    </div>
   );
-}
+};
 
 export default App;
