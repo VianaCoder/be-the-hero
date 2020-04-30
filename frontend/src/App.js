@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import Logon from './pages/logons'
+import Route from './routes';
 import './global.css';
 
 function App(){
 
   return (
     <div>
-      <Logon></Logon>
+      <Route/>
     </div>
   );
 };
