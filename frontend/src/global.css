@@ -30,7 +30,7 @@ form input {
     padding: 0 24px;
 }
 
-.button {
+button {
     width: 100%;
     height: 60px;
     background: #e02041;
@@ -47,6 +47,6 @@ form input {
     transition: filter 0.2s;
 }
 
-.button:hover {
+button:hover {
     filter: brightness(90%);
 }

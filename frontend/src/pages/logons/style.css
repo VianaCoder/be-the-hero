@@ -6,7 +6,7 @@
 
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .logon-block section.form {
@@ -40,4 +40,8 @@
 
 .logon-block section.form form a:hover {
     opacity: 0.8;
+}
+
+.logon-block button {
+    margin-left: 5px;
 }
