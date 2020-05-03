@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './style.css'
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import api from '../../services/api'
 
 import heroesImg from '../../assets/heroes.png';
 import logoImg from  '../../assets/logo.svg';
