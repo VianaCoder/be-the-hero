@@ -7,30 +7,26 @@ import logoImg from  '../../assets/logo.svg';
 import { FiArrowLeft } from 'react-icons/fi'
 import { Link } from 'react-router-dom';
 
-function Register(){
+function NewCase(){
     return(
-        <div className="register_page">
-            <div className="register_block">
+        <div className="case_page">
+            <div className="case_block">
                 <section className="left_page">
                     <img src={logoImg} alt="logo"/>
 
-                    <h1>Cadastro</h1>
-                    <p>Faça um cadastro, entre na plataforma e pessoas a encontrarem os casos da sua ONG.</p>
+                    <h1>Cadastro de Caso</h1>
+                    <p>Descreva o caso para que um de nossos heroís possa lhe ajudar.</p>
 
-                    <Link className="voltar" to= "/">
+                    <Link className="voltar" to= "/profile">
                         <FiArrowLeft size={16} color="#e02041" />
-                        Voltar para Logon
+                        Voltar
                     </Link>
                 </section>
                 <form>
-                    <input placeholder="Nome da ONG" />
-                    <input type="email" Name="Mail" placeholder="E-Mail" />
-                    <input placeholder="WhatsApp" />
+                    <input placeholder="Título do Caso" />
+                    <textarea Name="description" placeholder="Descrição" />
+                    <input placeholder="Valor em reais" />
 
-                    <section className="cidade_url">
-                        <input placeholder="Cidade" />
-                        <input placeholder="UF" style={{width: 80}}/>
-                    </section>
                     <button className="button" type="submit">Cadastrar</button>
                 </form>
 
@@ -39,4 +35,4 @@ function Register(){
     )
 };
 
-export default Register;
+export default NewCase;
