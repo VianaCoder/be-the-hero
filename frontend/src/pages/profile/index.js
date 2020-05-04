@@ -7,12 +7,14 @@ import { FiPower, FiTrash } from 'react-icons/fi'
 
 function Profile() {
 
+    let ongName = localStorage.getItem('ongName');
+
     return(
         <div className="profile_block">
             <header>
                 <section className="left">
                 <img src={logoImg} alt="Be the Hero"/>
-                <span>Bem vinda, APAD</span>
+                <span>Bem vinda, {ongName}</span>
                 </section>
 
                 <section className="right">
