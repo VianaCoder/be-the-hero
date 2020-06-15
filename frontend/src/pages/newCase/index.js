@@ -1,21 +1,22 @@
 import React, { useState } from 'react';
 import { FiArrowLeft } from 'react-icons/fi'
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import './style.css'
 import api from '../../services/api';
 import logoImg from  '../../assets/logo.svg';
 
-function NewCase(){
+export default function NewCase(){
 
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [value, setValue] = useState('');
     const ongId = localStorage.getItem('ongId')
-    //const history = useHistory();
+    const history = useHistory();
 
     async function handleNewCase(e){
-        e.preventDefaut()
+        e.preventDefault();
+        console.log('Novo incidente cadasrtado')
 
         const data = {
             title,
@@ -28,12 +29,13 @@ function NewCase(){
                 headers: {
                     Authorization: ongId,
                 }
-            })
+            });
+            history.push('/profile');
         }
         catch (err){
             alert('Erro ao cadastrar, tente novamente');
         }
-
+        
     };
 
     return(
@@ -71,5 +73,3 @@ function NewCase(){
         </div>
     )
 };
-
-export default NewCase;

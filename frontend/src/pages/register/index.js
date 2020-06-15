@@ -18,6 +18,7 @@ function Register(){
 
     async function handleRegister(e){
         e.preventDefault();
+        console.log('consalado')
 
         const data = {
             name,
